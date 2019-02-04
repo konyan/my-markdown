@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
+import './Editor.css';
 
 export default class Editor extends Component {
     render() {
         return (
-            <div>
-                <h1>this is my editor</h1>
+            <div className="markdown-body editor" contentEditable="true">
             </div>
         )
     }

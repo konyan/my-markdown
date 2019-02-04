@@ -1,7 +1,7 @@
 
 .App-header {
-  background-color: #282c34;
-  min-height: 6vh;
+  background-color: #101114;
+  height: 6vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +14,10 @@
   margin: 0;
   padding: 0;
   display: flex;
-  min-height: 94vh;
+  height: 94vh;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: green;
+
 }
 /* main>div{
   flex:1;
@@ -27,11 +27,14 @@
 }
 
 #editor{
-  background-color: #101314;
+  background-color: #131420;
+  height: 100%;
+  /* margin-top: 24px; */
   /* flex: 1; */
 }
 
 #preview{
 /* flex: 1; */
 background-color: #fff;
+height: 100%;
 }
