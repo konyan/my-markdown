@@ -1,19 +1,24 @@
 import React, { Component } from 'react'
 import './Editor.css';
 import PropTypes from 'prop-types';
+import { placeholder, test } from '../../my-const';
 
 export default class Editor extends Component {
 
     componentDidMount() {
         this.textEditor.focus();
+        this.textEditor.innerHTML = test;
+        this.onPreviewProcess(this.textEditor.innerHTML)
+
     }
 
     onChange = (e) => {
+        this.onPreviewProcess(this.textEditor.innerHTML)
+    }
 
-        let text = this.sanitizeHTMLString(this.textEditor.innerHTML);
-        // console.log(text);
+    onPreviewProcess(innerHTML) {
+        let text = this.sanitizeHTMLString(innerHTML);
         this.props.OnPreview(text);
-        // `Wild Header | Crazy Header | Another Header? ------------ | ------------- | -------------&nbsp;   Your content can | be here, and it | can be here.... And here. | Okay. | I think we get it.`
     }
     render() {
         return (
@@ -29,7 +34,7 @@ export default class Editor extends Component {
             .replace(/<br>/g, '\n')
             .replace(/<br class="Apple-interchange-newline">/g, '\n')
             .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-            .replace(/&nbsp;/g,' ' )
+            .replace(/&nbsp;/g, ' ')
         return text;
 
         // value = value.replace(/&lt;/g, '<')
