@@ -12,10 +12,6 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-
-  }
-
   onPreview = text => {
     this.setState({
       placeholder: text
@@ -27,10 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          Hello World
-          {/* <div id='preview' dangerouslySetInnerHTML={{ __html: marked(placeholder) }} /> */}
-          {/* <h1>Translate Here</h1> */}
-          {/* {this.myMark(placeholder)} */}
+        Hello MarkDown
         </header>
         <main className="container">
           <div id="editor" className="item">
